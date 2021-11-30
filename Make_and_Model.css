@@ -104,10 +104,13 @@ th, td {
     float: left;
     padding-left: 800px;
 }
+
+
 .row image{
     height: 100px;
-    width: 180px;
+    width: 200px;
 }
+
 /*
 footer {
     bottom: 0;
