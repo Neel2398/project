@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <title>Home page</title>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <link rel="stylesheet" href="./contact.css">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+      <!-- MDB -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css"  rel="stylesheet"/>
+      <!-- MDB -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="./make_and_model.js"></script>
+
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+               <a href="Home.html"><img src="Images/503-5034355_sport-car-logo-rent-a-car-logo-png.png" alt="Car info" height="70px" width="220px"></a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse float-right" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+					<ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                            <a class="nav-link" tabindex="-1" href="Home.html">Home</a>
+                      </li>
+                      <li class="nav-item active">
+                            <a class="nav-link" tabindex="-1" href="Make_and_Model.html">Make and Model</a>
+                      </li>
+                      <li class="nav-item">
+                            <a class="nav-link" tabindex="-1" href="Gallery.html">Gallery</a>
+                      </li>
+					  <li class="nav-item ">
+						<a class="nav-link" href="Aboutus.html">About us</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  Contact
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						  <a class="dropdown-item" href="#">content Us</a>
+						</div>
+					  </li>
+
+
+
+					</ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      
+<div class="container py-5">
+	
+    <div class="row text-center text-white mb-5">
+        <div class="col-lg-7 mx-auto">
+            <h2 class="display-4">Make and Model List</h2>
+        </div>
+    </div>
+	
+	<!-- <div class="row text-center text-white mb-5">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-expanded="true">
+		Make List
+	  </button>
+	  
+	  <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+		<button class="dropdown-item" type="button">Action</button>
+		<button class="dropdown-item" type="button">Another action</button>
+		<button class="dropdown-item" type="button">Something else here</button>
+	  </div>
+    </div> -->
+	
+  <div class="dropdown my-menu">
+            <button class="pl-5 pr-5 row text-center text-white mb-5 btn btn-secondary 
+                           dropdown-toggle" 
+                    type="button"
+                    id="dropdownMenuButton" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                --Select Make---
+            </button>
+            <div class="dropdown-menu" 
+                 aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" onclick="myFunction('honda')"
+                   href="javascript:void(0)">Honda</a>
+                <a class="dropdown-item" onclick="myFunction('Lexus')"
+                   href="javascript:void(0)">Lexus</a>
+                <a class="dropdown-item" onclick="myFunction('audi')"
+                   href="javascript:void(0)">Audi</a>
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- List group for Honda-->
+            <ul id="honda" class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Honda Accord</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>30 city / 38 highway</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>1.5 L 4-cylinder, 2.0 L 4-cylinder</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower</b></td>
+									<td>192 to 252 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $25,470 - 37,400</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2022-honda-accord-hybrid-sport-front-left.webp" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 Honda CR-V</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>28 city / 34 highway</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>1.5 L 4-cylinder</td>
+								  </tr>
+								  <tr>
+									<td><b>HorsePower</b></td>
+									<td>190 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $25,750 - $35,550</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/honda-crv-hybrid-2021--06-angle--blue--exterior--front.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item -->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 Honda Insight</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>55 city / 49 highway</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>1.5 L 4-cylinder</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower:</b></td>
+									<td> 151 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $25,210 - 29 ,400</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="https://blogmedia.dealerfire.com/wp-content/uploads/sites/749/2020/07/2020-Honda-Insight-in-gray_o.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item -->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 Honda Pilot</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>20 city / 27 highway</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>3.5 L V6</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower</b></td>
+									<td>280 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP:  $36,830 - 50,000</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2022-honda-passport-trailsport-mmp-1-1632410882.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+			
+			<!-- List group for Honda-->
+			<ul id="Lexus" class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 LEXUS UX 250H AWD</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>41 City /38 Highway MPG</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine (upto) :</b></td>
+									<td>4 Cyl - 2 L</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower</b></td>
+									<td>181 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $35,200</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2022-lexus-ux-front-left-nori-green.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 LEXUS ES 250 AWD</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>25 City / 34 Hwy</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>4 Cyl - 2.50 L</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower:</b></td>
+									<td>203 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $46,040  </h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2021_lexus_es-250_sedan_f-sport_fq_oem_1_1600.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>  <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item -->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2021 LEXUS NX 300 AWD</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>22 City / 28 Hwy</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine (upto) :</b></td>
+									<td>4 Cyl - 2 L</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower</b></td>
+									<td>194 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $46,210  </h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2021-lexus-nx-mmp-1-1596564141.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>  <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item -->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 LEXUS ES 350</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>22 City / 32 Hwy</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>6 Cyl - 3.50 L</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower</b></td>
+									<td>302 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $46,340 </h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2022_ES_Family_009-1500x900.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>  <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+       
+			<!-- List group for Audi-->
+			<ul id="audi" class="list-group shadow">
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Audi A8 L 60 Sedan</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>15 City /23 Hwy</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>4.0L V-8 cyl /td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower:</b></td>
+									<td>453 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $111,135</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2020-Audi-A8-01.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div> <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item-->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">Audi SQ5 3.0T Premium Plus SUV</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>19 City /24 Hwy</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine (upto) :</b></td>
+									<td>3.0 L V6</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower: </b></td>
+									<td>354 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $67,120</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2021-audi-sq5-011.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>  <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item -->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 Audi R8</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>14 city / 23 highway</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine:</b></td>
+									<td>5.2 L V10</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower: </b></td>
+									<td>562 to 602 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP: $148,700</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/H4sIAAAAAAAAAFvzloG1tIhBPNonK7EsUS8zXy84tSgzMSezKjEpJ9V63QXONcHX33oyMTBUFDAwMDAC1TJFO635LP6DjSPkAVSYSZmBpTw1qYARqMKNiSszNzE9VR8kwPv__39-Ru4iC93UihLdvNTcfHagEkGeuPmxVw2zjt_Z_tDry_wglxfsd56JM_BI.png" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>  <!-- End -->
+                </li> <!-- End -->
+                <!-- list group item -->
+                <li class="list-group-item">
+                    <!-- Custom content-->
+                    <li class="list-group-item">
+                    <!-- Custom content-->
+                    <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                        <div class="media-body order-2 order-lg-1">
+                            <h5 class="mt-0 font-weight-bold mb-2">2022 Audi Q8</h5>
+                            <p class="font-italic text-muted mb-0 small">
+								<table>
+								  <tr>
+									<td><b>Mileage (upto) :</b></td>
+									<td>18 city / 23 highway</td>
+								  </tr>
+								  <tr>
+									<td><b>Engine :</b></td>
+									<td>3.0 L V6</td>
+								  </tr>
+								  <tr>
+									<td><b>Horsepower:</b></td>
+									<td>591 hp</td>
+								  </tr>
+								</table>
+							</p>
+                            <div class="d-flex align-items-center justify-content-between mt-1">
+                                <h6 class="font-weight-bold my-2">MSRP:$70,300</h6>
+                                <ul class="list-inline small">
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                    <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
+                                </ul>
+                            </div>
+                        </div><img src="Images/2019-audi-q8-361-1544802623.jpg" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                    </div>   <!-- End -->
+                </li> <!-- End -->
+            </ul> <!-- End -->
+	   </div>
+    </div>
+</div>
+
+
+      <footer class="bg-light text-center text-lg-start">
+         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <span class="text-dark">11/06/2021, Neel Patel &emsp;&emsp;&emsp; Terms and condition</span>
+         </div>
+      </footer>
+   </body>
+</html>
